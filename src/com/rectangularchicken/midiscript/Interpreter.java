@@ -26,6 +26,8 @@ public class Interpreter {
      */
     public static void main(String[] args) throws Exception {
         if (args.length == 0) {
+            System.out.println("MIDIscript (Version " + VERSION + ")");
+            System.out.println("By Santiago Benoit");
             System.out.println("Usage: java -jar MIDIscript.jar filename.midi");
         } else {
             Sequence sequence = MidiSystem.getSequence(new File(args[0]));
@@ -134,6 +136,7 @@ public class Interpreter {
         }
     }
     
+    public static final String VERSION = "1.0";
     public static final int NOTE_ON = 0x90;
     public static final int NOTE_OFF = 0x80;
 }

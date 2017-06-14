@@ -1,7 +1,6 @@
 # MIDIscript
-A programming language, derived from Brainfuck, that reads a MIDI file and maps each note to a command.
-## Author
-Santiago Benoit
+### By Santiago Benoit
+An esoteric programming language, derived from Brainfuck, that reads a MIDI file and maps each note to a command.
 ## Structure
 Like Brainfuck, MIDIscript has a cell-based memory system, with a dynamically allocated size. Each data cell holds one byte. Each MIDI track gets its own memory space and thread, and all tracks are run simultaneously.
 ## Commands

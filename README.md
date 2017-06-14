@@ -1,8 +1,10 @@
 # MIDIscript
 ### By Santiago Benoit
 An esoteric programming language, derived from Brainfuck, that reads a MIDI file and maps each note to a command.
+
 ## Structure
 Like Brainfuck, MIDIscript has a cell-based memory system, with a dynamically allocated size. Each data cell holds one byte. Each MIDI track gets its own memory space and thread, and all tracks are run simultaneously.
+
 ## Commands
 Each note on the keyboard is mapped to a command.
 - `C` terminates the program
@@ -17,5 +19,8 @@ Each note on the keyboard is mapped to a command.
 - `A` jumps the instruction pointer to the matching `A#` if the byte at the data pointer is zero
 - `A#` jumps the instruction pointer the the matching `A` if the byte at the data pointer is nonzero
 - `B` terminates the thread
+
 ## Interpreter
+To interpret a MIDI file, specify the filename like so:
+
 `java -jar MIDIscript.jar filename.midi`
